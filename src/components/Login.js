@@ -43,11 +43,11 @@ const Login = () => {
                         </div>
                         {/* <!--submit--> */}
                         <div className="inputfield">
-                            <button type="button" href="test1.html" value="login" className="btn">
-                                <Link to="/Dashboard">
+                                <Link to="/Dashboard" className="btn">
+                            <button type="button"  value="login" className="btn">
                                     Login
-                                </Link>
                             </button>
+                                </Link>
                         </div>
                     </div>
                     <div className="Registration">

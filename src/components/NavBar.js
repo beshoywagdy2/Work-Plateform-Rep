@@ -38,14 +38,14 @@
                      <span className="tooltip">Dashboard</span>
                  </li>
                  <li>
-                 <Link to="New folder/test3.html">
+                 <Link to="/user">
                          <i className='bx bx-user'></i>
                          <span className="links_name">User</span>
                      </Link>
                      <span className="tooltip">User</span>
                  </li>
                  <li>
-                 <Link to="#">
+                 <Link to="/Messages">
                          <i className='bx bx-chat'></i>
                          <span className="links_name">Messages</span>
                      </Link>

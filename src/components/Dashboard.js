@@ -7,25 +7,29 @@ import './Dashboard.css';
 
 
 const Dashboard = () => {
-    return (  <div className="sidebar">
+            return (  
+     <section className="home_content"> 
+                <div className="sidebar">
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
         {/* this is the nav bar (working) */}
-     <NavBar/>
      {/* content of the page */}
-    <section className="home_content"> 
+     <NavBar/>
+     </div>
         <div className="nav_top">
             <div className="continer1">
                 <div className="nav_top_left">
                     <ul>
                         <li>
-                            {/* <a className="ico1">Dashboard <span className="name_team">\</span></a> */}
+                            <a className="ico1">Dashboard <span className="name_team">\</span></a>
                             </li>
                     </ul>
 
                     <div id="myModal">
                         <input type="text"/>
                         <div className="a_ico2">
-                            {/* <a className="ico2"><i className="fas fa-search"></i></a> */}
-                            {/* <a className="ico2" id="span"><i className="fas fa-times"></i></a> */}
+                            <a className="ico2"><i className="fas fa-search"></i></a>
+                            <a className="ico2" id="span"><i className="fas fa-times"></i></a>
                         </div>
                     </div>
                 </div>
@@ -33,16 +37,16 @@ const Dashboard = () => {
                     <ul>
                         {/* <!--<li><a role="button" className="ico1" id="myBtn"><i className="fas fa-search"></i></a></li--> */}
                         <li>
-                            {/* <a role="button" className="ico1"><i className="far fa-comments"></i></a> */}
+                            <a role="button" className="ico1"><i className="far fa-comments"></i></a>
                             </li>
                         <li>
-                            {/* <a role="button" className="ico1"><i className="far fa-bell"></i></a> */}
+                            <a role="button" className="ico1"><i className="far fa-bell"></i></a>
                         </li>
                         <li>
-                            {/* <a role="button" className="ico1" data-widget="fullscreen"><i className="fas fa-expand-arrows-alt"></i></a> */}
+                            <a role="button" className="ico1" data-widget="fullscreen"><i className="fas fa-expand-arrows-alt"></i></a>
                             </li>
                         <li>
-                            {/* <a role="button" className="ico1"><img src="http://placehold.it/40/" href="test3.html" className="img_user" alt="User Image"/></a> */}
+                            <a role="button" className="ico1"><img src="http://placehold.it/40/" href="test3.html" className="img_user" alt="User Image"/></a>
                         </li>
                     </ul>
                 </div>
@@ -58,8 +62,8 @@ const Dashboard = () => {
                 <option value="Room3">Room3</option>
                 <option value="Room4">Room4</option>
                 </select>
-                {/* <a className="add_room" onclick="myFunction7()">Add Room</a> */}
-                {/* <a className="add_team" onclick="myFunction6()">Add Team</a> */}
+                <a className="add_room" onclick="myFunction7()">Add Room</a>
+                <a className="add_team" onclick="myFunction6()">Add Team</a>
 
                 <div className="body_data_info">
                     <div className="data_show">
@@ -140,17 +144,17 @@ const Dashboard = () => {
                         </a> */}
                         <ul>
                             <li>
-                                {/* <a>name team</a> */}
+                                <a>name team</a>
                                 <input type="text"/>
                                 <button>Edit</button>
                             </li>
                             <li>
-                                {/* <a>des</a> */}
+                                <a>des</a>
                                 <textarea type="text"></textarea>
                                 <button>Edit</button>
                             </li>
                             <li>
-                                {/* <a>Member</a> */}
+                                <a>Member</a>
                                 <ul className="name_member">
                                     <li>
                                         {/* <img src="http://placehold.it/60/" className="img_user" style="float: left; margin: auto;"/> paula */}
@@ -211,19 +215,19 @@ const Dashboard = () => {
                         </a> */}
                         <ul>
                             <li>
-                                {/* <a>Task title</a> */}
+                                <a>Task title</a>
                                 <input type="text"/>
                             </li>
                             <li>
-                                {/* <a>from</a> */}
+                                <a>from</a>
                                 <input type="date"/>
                             </li>
                             <li>
-                                {/* <a>to</a> */}
+                                <a>to</a>
                                 <input type="date"/>
                             </li>
                             <li>
-                                {/* <a>des</a> */}
+                                <a>des</a>
                                 <textarea type="text"></textarea>
                             </li>
                             <li id="div-container">
@@ -244,15 +248,15 @@ const Dashboard = () => {
                         </a> */}
                         <ul>
                             <li>
-                                {/* <a>Neam Team</a> */}
+                                <a>Neam Team</a>
                                 <input type="text"/>
                             </li>
                             <li>
-                                {/* <a>des</a> */}
+                                <a>des</a>
                                 <textarea type="text"></textarea>
                             </li>
                             <li className="select1">
-                                {/* <a>Type Team</a> */}
+                                <a>Type Team</a>
                                 {/* <div style="margin: auto;display: table;">
                                     <input type="checkbox" style="width: 0;margin: 0;float: left;margin-top: 5px;margin-right: 15px;"/>
                                     <select className="select">
@@ -274,11 +278,11 @@ const Dashboard = () => {
                         </a> */}
                         <ul>
                             <li>
-                                {/* <a>Add Room</a> */}
+                                <a>Add Room</a>
                                 <input type="text"/>
                             </li>
                             <li>
-                                {/* <a>des</a> */}
+                                <a>des</a>
                                 <textarea type="text"></textarea>
                             </li>
                         </ul>
@@ -289,7 +293,8 @@ const Dashboard = () => {
             </div>
         </div>
     </section> 
-    </div>
+    
+    
 
     );
 }

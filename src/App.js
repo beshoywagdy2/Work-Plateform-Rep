@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import Login from './components/Login';
 import Registration from './components/Registration';
 import Dashboard from './components/Dashboard';
+import UserProfile from './components/User';
 import {BrowserRouter as Router,Route , Switch} from 'react-router-dom';
 
 function App() {
@@ -14,21 +15,18 @@ function App() {
            <Switch>
             
              <Route exact path="/">
-             {/* <NavBar/> */}
                 <Login/>
-                
              </Route>
              <Route path="/Registration">
                  <Registration/>
              </Route>
              <Route path="/DashBoard">
-                  {/* <NavBar/> */}
                   <Dashboard/>
              </Route>
-             <Route path="">
-               
+             <Route path="/User">
+                  <UserProfile/>
              </Route>
-             <Route path="">
+             <Route path="/Messages">
                
              </Route>
            </Switch>

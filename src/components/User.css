@@ -1,0 +1,56 @@
+body {
+  overflow-y: scroll;
+}
+.contaner2 {
+  margin: 50px auto;
+}
+
+.all_data {
+  padding: 20px;
+  margin: 50px;
+  border-radius: 10px;
+}
+
+.speed_data {
+  margin: 30px 170px;
+  display: flex;
+}
+
+.img_user {
+  border-radius: 150px;
+  float: left;
+}
+
+.name_user1 {
+  font-size: 25px;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.data_info {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.data_info p {
+  margin-top: 50px;
+}
+
+.data_info a {
+  font-size: 25px;
+  margin-left: 200px;
+  width: 200px;
+  display: inline-flex;
+}
+
+.data_info input {
+  width: 600px;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+
+.text {
+  margin-left: 100px;
+  font-size: 30px;
+  margin-top: 60px;
+}
