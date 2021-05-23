@@ -8,7 +8,9 @@ import './Dashboard.css';
 
 const Dashboard = () => {
     return (  <div className="sidebar">
+        {/* this is the nav bar (working) */}
      <NavBar/>
+     {/* content of the page */}
     <section className="home_content"> 
         <div className="nav_top">
             <div className="continer1">
