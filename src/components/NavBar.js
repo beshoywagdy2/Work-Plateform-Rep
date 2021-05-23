@@ -59,7 +59,7 @@
                      <span className="tooltip">project </span>
                  </li>
                  <li>
-                 <Link to="#">
+                 <Link to="/ContactUs">
                          <i className='bx bxs-contact'></i>
                          <span className="links_name">contact us</span>
                      </Link>

@@ -4,6 +4,8 @@ import Login from './components/Login';
 import Registration from './components/Registration';
 import Dashboard from './components/Dashboard';
 import UserProfile from './components/User';
+import MessagesUser from './components/Messages';
+import ContactUs from './components/ContactUs';
 import {BrowserRouter as Router,Route , Switch} from 'react-router-dom';
 
 function App() {
@@ -27,7 +29,10 @@ function App() {
                   <UserProfile/>
              </Route>
              <Route path="/Messages">
-               
+                   <MessagesUser/>
+             </Route>
+             <Route path="/ContactUs">
+                   <ContactUs/>
              </Route>
            </Switch>
          </div>
