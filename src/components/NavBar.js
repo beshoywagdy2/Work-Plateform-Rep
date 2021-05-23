@@ -19,58 +19,58 @@
             }
         
     };
-  
+    // class="sidebar"
      return (
-             <div class="sidebar">
-             <div class="logo_content">
-                 <div class="logo">
-                     <i class='bx bx-won'></i>
-                     <div class="logo_name">workera</div>
+             <div >
+             <div className="logo_content">
+                 <div className="logo">
+                     <i className='bx bx-won'></i>
+                     <div className="logo_name">workera</div>
                  </div>
-                 <i class='bx bx-menu' id="btn" onClick={handleclick}></i>
+                 <i className='bx bx-menu' id="btn" onClick={handleclick}></i>
              </div>
-             <ul class="nav_list">
+             <ul className="nav_list">
                  <li>
-                     <Link to="">
-                         <i class='bx bx-grid-alt'></i>
-                         <span class="links_name">Dashboard</span>
+                     <Link to="/Dashboard">
+                         <i className='bx bx-grid-alt'></i>
+                         <span className="links_name">Dashboard</span>
                          </Link>
-                     <span class="tooltip">Dashboard</span>
+                     <span className="tooltip">Dashboard</span>
                  </li>
                  <li>
                  <Link to="New folder/test3.html">
-                         <i class='bx bx-user'></i>
-                         <span class="links_name">User</span>
+                         <i className='bx bx-user'></i>
+                         <span className="links_name">User</span>
                      </Link>
-                     <span class="tooltip">User</span>
+                     <span className="tooltip">User</span>
                  </li>
                  <li>
                  <Link to="#">
-                         <i class='bx bx-chat'></i>
-                         <span class="links_name">Messages</span>
+                         <i className='bx bx-chat'></i>
+                         <span className="links_name">Messages</span>
                      </Link>
-                     <span class="tooltip">Messages</span>
+                     <span className="tooltip">Messages</span>
                  </li>
                  <li>
                  <Link to="#">
-                         <i class='bx bx-sitemap'></i>
-                         <span class="links_name">project </span>
+                         <i className='bx bx-sitemap'></i>
+                         <span className="links_name">project </span>
                      </Link>
-                     <span class="tooltip">project </span>
+                     <span className="tooltip">project </span>
                  </li>
                  <li>
                  <Link to="#">
-                         <i class='bx bxs-contact'></i>
-                         <span class="links_name">contact us</span>
+                         <i className='bx bxs-contact'></i>
+                         <span className="links_name">contact us</span>
                      </Link>
-                     <span class="tooltip">contact us </span>
+                     <span className="tooltip">contact us </span>
                  </li>
-                 <li class="log_out">
+                 <li className="log_out">
                  <Link to="#">
-                         <i class='bx bx-log-out' id="log_out"></i>
-                         <span class="links_name">log_out</span>
+                         <i className='bx bx-log-out' id="log_out"></i>
+                         <span className="links_name">log_out</span>
                      </Link>
-                     <span class="tooltip">log_out</span>
+                     <span className="tooltip">log_out</span>
                  </li>
              </ul>
          </div>
