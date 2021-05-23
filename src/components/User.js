@@ -5,50 +5,50 @@ import NavBar from './NavBar';
 
 const UserProfile = () => {
     return ( 
-        <section class="home_content">
-            <div class="sidebar">
+        <section className="home_content">
+            <div className="sidebar">
                 <NavBar/>
             </div>
-        <div class="nav_top">
-            <div class="continer1">
-                <div class="nav_top_left">
+        <div className="nav_top">
+            <div className="continer1">
+                <div className="nav_top_left">
                     <ul>
-                        <li><a class="ico1">profile </a></li>
+                        <li><a className="ico1">profile </a></li>
                     </ul>
 
                     <div id="myModal">
                         <input type="text"/>
-                        <div class="a_ico2">
-                            <a class="ico2"><i class="fas fa-search"></i></a>
-                            <a class="ico2" id="span"><i class="fas fa-times"></i></a>
+                        <div className="a_ico2">
+                            <a className="ico2"><i className="fas fa-search"></i></a>
+                            <a className="ico2" id="span"><i className="fas fa-times"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="nav_top_right">
+                <div className="nav_top_right">
                     <ul>
-                        {/* <!--<li><a role="button" class="ico1" id="myBtn"><i class="fas fa-search"></i></a></li--> */}
-                        <li><a role="button" class="ico1"><i class="far fa-comments"></i></a></li>
-                        <li><a role="button" class="ico1"><i class="far fa-bell"></i></a></li>
-                        <li><a role="button" class="ico1" data-widget="fullscreen"><i class="fas fa-expand-arrows-alt"></i></a></li>
+                        {/* <!--<li><a role="button" className="ico1" id="myBtn"><i className="fas fa-search"></i></a></li--> */}
+                        <li><a role="button" className="ico1"><i className="far fa-comments"></i></a></li>
+                        <li><a role="button" className="ico1"><i className="far fa-bell"></i></a></li>
+                        <li><a role="button" className="ico1" data-widget="fullscreen"><i className="fas fa-expand-arrows-alt"></i></a></li>
                         <li>
-                            <a role="button" class="ico1"><img src="http://placehold.it/40/" href="test3.html" class="img_user" alt="User Image"/></a>
+                            <a role="button" className="ico1"><img src="http://placehold.it/40/" href="test3.html" className="img_user" alt="User Image"/></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="contaner2">
-            <div class="Profile">
-                <div class="all_data">
-                    <div class="speed_data">
-                        <img src="http://placehold.it/250/" class="img_user" alt="img user"/>
-                        <div class="text">
-                            <a class="name_user1">paula wadgy</a>
-                            <a class="email_user">paulwagdy@gmail.com</a>
+        <div className="contaner2">
+            <div className="Profile">
+                <div className="all_data">
+                    <div className="speed_data">
+                        <img src="http://placehold.it/250/" className="img_user" alt="img user"/>
+                        <div className="text">
+                            <a className="name_user1">paula wadgy</a>
+                            <a className="email_user">paulwagdy@gmail.com</a>
                         </div>
                     </div>
-                    <div class="data_info">
+                    <div className="data_info">
                         <p>
                             <a>user name</a>
                             <input type="text"/>

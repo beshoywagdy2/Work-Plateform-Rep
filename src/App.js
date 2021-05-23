@@ -7,6 +7,7 @@ import UserProfile from './components/User';
 import MessagesUser from './components/Messages';
 import ContactUs from './components/ContactUs';
 import {BrowserRouter as Router,Route , Switch} from 'react-router-dom';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
              </Route>
              <Route path="/ContactUs">
                    <ContactUs/>
+             </Route>
+             <Route path="/Projects">
+                   <Projects/>
              </Route>
            </Switch>
          </div>

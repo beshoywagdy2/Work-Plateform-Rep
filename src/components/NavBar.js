@@ -52,7 +52,7 @@
                      <span className="tooltip">Messages</span>
                  </li>
                  <li>
-                 <Link to="#">
+                 <Link to="/Projects">
                          <i className='bx bx-sitemap'></i>
                          <span className="links_name">project </span>
                      </Link>
@@ -66,7 +66,7 @@
                      <span className="tooltip">contact us </span>
                  </li>
                  <li className="log_out">
-                 <Link to="#">
+                 <Link to="/Login">
                          <i className='bx bx-log-out' id="log_out"></i>
                          <span className="links_name">log_out</span>
                      </Link>
