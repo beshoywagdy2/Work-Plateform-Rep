@@ -44,37 +44,37 @@ const Registration = () => {
               
            
 
-                  const checkIfUserNameExists = (usernamever=true,value) =>{
+                  const checkIfUserNameExists = (value) =>{
                       setUserName(value);
                       axios.get(`${serverUrl}/users/username/${value}/exists`)
                                 .then( a => {
                                     if(a.data === true)
                                     {  
                                        console.log(`${username} is exist`) ;
-                                       usernamever=true;
+                                    //    usernamever=true;
                                     }
 
                                     else
                                     { 
                                         console.log(`${username} not exist`);
-                                        usernamever=false;
+                                        // usernamever=false;
                                     } 
                                 })}
                               
-                                const checkIfEmail = (emailaddressver=true,value) =>{
-                                    setUserName(value);
+                                const checkIfEmail = (value) =>{
+                                    setEmail(value);
                                     axios.get(`${serverUrl}/users/email/${value}/exists`)
                                               .then( a => {
                                                   if(a.data === true)
                                                   {  
                                                      console.log(`${email} is exist`); 
-                                                     emailaddressver=true;
+                                                    //  emailaddressver=true;
                                                   }
               
                                                   else
                                                   { 
                                                       console.log(`${email} not exist`)
-                                                      emailaddressver=false;
+                                                    //   emailaddressver=false;
                                                   } 
                                               })}
                                         //       const valid=(a)={
@@ -99,7 +99,7 @@ const Registration = () => {
                     </div>
                     <div className="form">
                     <div className="inputfield">
-                        <span className="alreadyexict">This User Name Already Exicte </span>
+                        {/* <span className="alreadyexict">This User Name Already Exicte </span> */}
                             <label>UserName</label>
                             <input type="text" name="firstname" className="input" placeholder="FirstName" onChange={e=> checkIfUserNameExists(e.target.value)} required/>
                         </div>
