@@ -113,7 +113,7 @@ const Registration = () => {
                         </div>
                         <div className="inputfield">
                             <label>Password</label>
-                            <input type="password" name="password" className="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  placeholder="Password" onChange={e=>setPassword(e.target.value)} required/>
+                            <input type="password" name="password" className="input" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" title="Must contain at least one number and one uppercase and lowercase letter,and at least one special character and at least 8 or more characters"  placeholder="Password" onChange={e=>setPassword(e.target.value)} required/>
                         </div>
                         <div className="inputfield">
                             <label>Confirm Password</label>

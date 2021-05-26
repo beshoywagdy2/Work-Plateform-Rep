@@ -1,34 +1,61 @@
 import axios from "axios";
 import React,{SyntheticEvent, useState} from "react";
 import ReactDOM from 'react-dom';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { setUserSession } from "../utils/common";
 import serverUrl from "./domain";
 import './Login.css';
 import ParticlesBackground from "./ParticalesBackground";
 // import Registration from "./Registration";
 // import LoginScript from "./LoginScript";
 
-const Login = () => {
-
+const Login = (props) => {
+    // {user, setUser}--->aly kanyt gwa al login brackets
+                const[error,setError]=useState(null);
+                // const[loading,setLoading]=useState=(false);
                 const[email,setEmail]=useState(null);
                 const[password,SetPassowrd]=useState(null);
                
 
                 const loginbtn = async (e:SyntheticEvent)=>{
                     e.preventDefault();   
+                    setError(null);
+                    // setLoading(true);
                     console.log('working');
-                    console.log(email,password);
-                    const response = await axios.post(`${serverUrl}/auth/signin`,
+                    console.log("Email is : "+ email + " and password : "  + password);
+
+                     await axios.post(`${serverUrl}/auth/signin`,
                     {
                           email,
                           password 
                     })
-                    .then(a => console.log(JSON.stringify(a)))
+                    .then(a => {
+                        // setUser({ token : a.data.token });
+                        // setError(false);
+                        // setLoading(false);
+                        setUserSession(a.data.token , a.data.user);
+                        props.history.push('/dashboard');
+                        // console.log('response >>>', response)  
+                        // Redirect('./DashBoard')
+                    })
                       .catch( e => {
+                        //   setLoading(false);
                           console.log("I am in Error");
-                          console.log( "Error =====> " + JSON.stringify(e.response.data));
+                        //   console.error( "Error =====> " + JSON.stringify(e.response.data));
+                          if(e.response.status === 401 || e.response.status === 400)
+                          {
+                            // e.response.data.message
+                            setError("Email / Password is incorrect");
+                          }
+                          else
+                          {
+                            setError("Somthing Went Wrong.  Please try again later.");
+                          }
+                        //   setError(true);
   
-                      }); 
+                      });
+                      
+                    //   console.log( "the user  is =======> " + JSON.stringify(user));
                     }
 
 
@@ -47,7 +74,7 @@ const Login = () => {
                         log in
                     </div>
                     {/* <!--input card--> */}
-                    <div className="form">
+                    <form className="form" >
                         {/* <!--Email Address--> */}
                         <div className="inputfield">
                             <label>Email Address</label>
@@ -66,14 +93,16 @@ const Login = () => {
                     </label>
                             <p>Remmber me</p>
                         </div>
+                        {error &&<p className="error">{error}</p>}
+                        
                         {/* <!--submit--> */}
                         
                         <div className="inputfield">
-                            <button type="button"  value="login" className="btn" onClick={loginbtn}>
+                            <button type="button"  value="login" className="btn" onClick={loginbtn} >
                                     Login
                             </button>        
                         </div>
-                    </div>
+                    </form>
                     <div className="Registration">
                         <Link to="Registration">Sign Up</Link>
                     </div>

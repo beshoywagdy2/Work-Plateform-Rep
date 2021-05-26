@@ -1,12 +1,35 @@
-import react from "react";
+import react, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 //  import './NavBar.css';
 import './Dashboard.css';
+import axios from "axios";
+import serverUrl from "./domain";
 
 
 const Dashboard = () => {
+
+
+        const [rooms, setRooms] = useState([]);
+
+        // console.log(user);
+
+
+        // console.log("token is ======> " + user.token);
+
+             
+        // useEffect(async ()  => {
+        //      const  callApi = async ()  =>  {
+        //     //    return await axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${user.token}`}})
+        //         // .then(a => JSON.stringify("response is =======> "+a))
+        //         // .catch( e => console.log("Error is =======> "+e.body));    
+        //     }
+
+        //     // console.log(JSON.stringify( await  callApi()));
+                
+        // },[])
+
             return (  
      <section className="home_content"> 
                 <div className="sidebar">

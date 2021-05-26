@@ -1,12 +1,14 @@
  import React,{Component} from 'react';
  import './NavBar.css';
- import { Link } from "react-router-dom";
+ import ReactDOM from 'react-dom';
+ import { Link, Redirect } from "react-router-dom";
+ import { removeUserSession, setUserSession } from "../utils/common";
  
  
  
  
  
- const NavBar = () => {
+ const NavBar = (props) => {
    
     const handleclick=()=>{
         let btn = document.querySelector("#btn");
@@ -17,8 +19,12 @@
             } else {
                 btn.classList.replace("bx-menu-alt-right", "bx-menu");
             }
-        
-    };
+            
+        };
+        const handelLogout =() =>{
+            // props.history.push('/');
+            removeUserSession();
+        }
     // class="sidebar"
      return (
              <div >
@@ -66,7 +72,7 @@
                      <span className="tooltip">contact us </span>
                  </li>
                  <li className="log_out">
-                 <Link to="/Login">
+                 <Link onClick={handelLogout} to="/">
                          <i className='bx bx-log-out' id="log_out"></i>
                          <span className="links_name">log_out</span>
                      </Link>
