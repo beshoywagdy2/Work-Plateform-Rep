@@ -21,6 +21,7 @@ export const removeUserSession=()=>{
     sessionStorage.removeItem("user");
 }
 export const getRoom=()=>{
-    axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}});
+    return  axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}});
+    
 
 }

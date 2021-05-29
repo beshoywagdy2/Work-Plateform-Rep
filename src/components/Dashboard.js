@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import './Dashboard.css';
 import axios from "axios";
 import serverUrl from "./domain";
-import { getToken } from "../utils/common";
+import { getRoom, getToken } from "../utils/common";
 
 
 const Dashboard = () => {
@@ -16,10 +16,12 @@ const Dashboard = () => {
 
         console.log(getToken());
       
-             const getrooms=()=>{
-                 axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}})
-                 .then(console.log(res => JSON.stringify(res)))
-             }
+        console.log(getRoom());
+        
+            //  const getrooms=()=>{
+            //      axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}})
+            //      .then(console.log(res => JSON.stringify(res)))
+            //  }
         // useEffect(async ()  => {
         //      const  callApi = async ()  =>  {
         //        return await axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}})
