@@ -12,7 +12,7 @@ import ParticlesBackground from "./ParticalesBackground";
 const Login = (props) => {
     // {user, setUser}--->aly kanyt gwa al login brackets
                 const[error,setError]=useState(null);
-                // const[loading,setLoading]=useState=(false);
+                const[loading,setLoading]=useState(false);
                 const[email,setEmail]=useState(null);
                 const[password,SetPassowrd]=useState(null);
                
@@ -20,7 +20,7 @@ const Login = (props) => {
                 const loginbtn = async (e:SyntheticEvent)=>{
                     e.preventDefault();   
                     setError(null);
-                    // setLoading(true);
+                    setLoading(true);
                     console.log('working');
                     console.log("Email is : "+ email + " and password : "  + password);
 
@@ -32,14 +32,14 @@ const Login = (props) => {
                     .then(a => {
                         // setUser({ token : a.data.token });
                         // setError(false);
-                        // setLoading(false);
+                        setLoading(false);
                         setUserSession(a.data.token , a.data.user);
                         props.history.push('/dashboard');
                         // console.log('response >>>', response)  
                         // Redirect('./DashBoard')
                     })
                       .catch( e => {
-                        //   setLoading(false);
+                          setLoading(false);
                           console.log("I am in Error");
                         //   console.error( "Error =====> " + JSON.stringify(e.response.data));
                           if(e.response.status === 401 || e.response.status === 400)
@@ -98,7 +98,7 @@ const Login = (props) => {
                         {/* <!--submit--> */}
                         
                         <div className="inputfield">
-                            <button type="button"  value="login" className="btn" onClick={loginbtn} >
+                            <button type="button"  value="login" className="btn" onClick={loginbtn} disabled={loading} >
                                     Login
                             </button>        
                         </div>

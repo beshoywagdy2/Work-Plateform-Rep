@@ -1,3 +1,6 @@
+import axios from "axios";
+import serverUrl from "../components/domain";
+
 export const getUser=()=>{
     const userStr = sessionStorage.getItem("user");
     if(userStr) return JSON.parse(userStr);
@@ -16,4 +19,8 @@ export const setUserSession=(token,user)=>{
 export const removeUserSession=()=>{
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("user");
+}
+export const getRoom=()=>{
+    axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}});
+
 }

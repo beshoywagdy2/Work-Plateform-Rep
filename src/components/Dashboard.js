@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import React, { useEffect, useState,Component } from "react";
 import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import './Dashboard.css';
 import axios from "axios";
 import serverUrl from "./domain";
+import { getToken } from "../utils/common";
 
 
 const Dashboard = () => {
@@ -13,22 +14,22 @@ const Dashboard = () => {
 
         const [rooms, setRooms] = useState([]);
 
-        // console.log(user);
-
-
-        // console.log("token is ======> " + user.token);
-
-             
+        console.log(getToken());
+      
+             const getrooms=()=>{
+                 axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}})
+                 .then(console.log(res => JSON.stringify(res)))
+             }
         // useEffect(async ()  => {
         //      const  callApi = async ()  =>  {
-        //     //    return await axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${user.token}`}})
-        //         // .then(a => JSON.stringify("response is =======> "+a))
-        //         // .catch( e => console.log("Error is =======> "+e.body));    
+        //        return await axios.get(`${serverUrl}/users/rooms`,{'headers' : {"Authorization" : `Bearer ${getToken()}`}})
+        //         .then(a => JSON.stringify("response is =======> "+a.data))
+        //         .catch( e => console.log("Error is =======> "+e.body));    
         //     }
 
-        //     // console.log(JSON.stringify( await  callApi()));
+        //     console.log(JSON.stringify( await  callApi()));
                 
-        // },[])
+        // },[]);
 
             return (  
      <section className="home_content"> 
@@ -80,13 +81,10 @@ const Dashboard = () => {
             <div className="continer2">
 
                 <select className="room_select" id="room_select">
-                <option value="Room1">Room1</option>
-                <option value="Room2">Room2</option>
-                <option value="Room3">Room3</option>
-                <option value="Room4">Room4</option>
+                <option value={rooms} key={rooms.id}>{rooms.name}</option>
                 </select>
-                <a className="add_room" onclick="myFunction7()">Add Room</a>
-                <a className="add_team" onclick="myFunction6()">Add Team</a>
+                <a className="add_room" onClick="myFunction7()">Add Room</a>
+                <a className="add_team" onClick="myFunction6()">Add Team</a>
 
                 <div className="body_data_info">
                     <div className="data_show">
